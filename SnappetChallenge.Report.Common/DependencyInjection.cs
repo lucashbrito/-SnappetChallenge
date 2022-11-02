@@ -11,20 +11,30 @@ namespace SnappetChallenge.Report.Common
     {
         public async static Task<IServiceCollection> AddReportDependencyInjection(this IServiceCollection services, string keyVaultAddress)
         {
-            var client = new SecretClient(new Uri(keyVaultAddress), new DefaultAzureCredential() { },
-                new SecretClientOptions()
-                {
-                    Retry = {
+            var memoryDatabse = true;
+
+            if (memoryDatabse)
+            {
+                var client = new SecretClient(new Uri(keyVaultAddress), new DefaultAzureCredential() { },
+                 new SecretClientOptions()
+                 {
+                     Retry = {
                     Delay= TimeSpan.FromSeconds(2),
                     MaxDelay = TimeSpan.FromSeconds(16),
                     MaxRetries = 5,
                     Mode = RetryMode.Exponential
-                }
-                });
+                 }
+                 });
 
-            var general = await client.GetSecretAsync("Repositories--Report--ConnectionString");
+                var general = await client.GetSecretAsync("Repositories--Report--ConnectionString");
+                Configure.AddReportRepository(services, general?.Value?.Value?.ToString(), false);
+            }
+            else
+            {
+                Configure.AddReportRepository(services, "Repositories--Report--ConnectionString", memoryDatabse);
+            }
 
-            Configure.AddReportRepository(services, general?.Value?.Value?.ToString(), false);
+
 
             services.AddScoped<IReportService, ReportService>();
 
