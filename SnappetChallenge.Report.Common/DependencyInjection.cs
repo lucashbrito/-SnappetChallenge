@@ -27,11 +27,11 @@ namespace SnappetChallenge.Report.Common
                  });
 
                 var general = await client.GetSecretAsync("Repositories--Report--ConnectionString");
-                Configure.AddReportRepository(services, general?.Value?.Value?.ToString(), false);
+                Configure.AddReportRepository(services, general?.Value?.Value?.ToString());
             }
             else
             {
-                Configure.AddReportRepository(services, "Repositories--Report--ConnectionString", memoryDatabse);
+                Configure.UseMemoryDataBase(services, "Repositories--Report--ConnectionString");
             }
 
 
