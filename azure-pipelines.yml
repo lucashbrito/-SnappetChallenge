@@ -1,0 +1,63 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+  webproject: '**/SnappetChallenge.Report.WebApp.csproj'
+  apiproject: '**/SnappetChallenge.Report.API.csproj'
+  
+steps:
+
+- task: NuGetToolInstaller@1
+  name: 'installnugettool'
+  displayName: 'install Nugettool'
+
+- task: NuGetCommand@2
+  name: 'restorenugettool'
+  displayName: 'restore Nugettool'
+  inputs:
+    restoreSolution: '$(solution)'
+
+- task: VSTest@2
+  name: 'test'
+  displayName: 'running test'
+  inputs:
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: CopyFiles@2
+  inputs:
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- task: DotNetCoreCLI@2
+  name: 'publishewebapp'
+  displayName: 'publish webapp'
+  inputs:
+    command: 'publish'
+    publishWebProjects: false
+    projects: '$(webproject)'
+    arguments: '--configuration $(buildConfiguration)'
+    zipAfterPublish: false
+
+- task: DotNetCoreCLI@2
+  name: 'publisheapiapp'
+  displayName: 'publish apiapp'
+  inputs:
+    command: 'publish'
+    publishWebProjects: false
+    projects: '$(apiproject)'
+    arguments: '--configuration $(buildConfiguration)'
+    zipAfterPublish: false
+
+- task: PublishBuildArtifacts@1
+  name: 'PublishBuildArtifacts'
+  displayName: 'Publish Build Artifacts'
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'  

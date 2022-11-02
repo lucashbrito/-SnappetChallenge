@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SnappetChallenge.Report.Domain\SnappetChallenge.Report.Domain.csproj" />
+    <ProjectReference Include="..\SnappetChallenge.Report.Repository\SnappetChallenge.Report.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

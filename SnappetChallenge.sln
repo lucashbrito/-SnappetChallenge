@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnappetChallenge.Report.Domain", "SnappetChallenge.Report.Domain\SnappetChallenge.Report.Domain.csproj", "{99227308-BFCF-4C67-BE48-32C53C0B0C6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Presentations", "1. Presentations", "{CFF56F26-2F04-4720-93EB-DC9C912C0F9D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Domains", "2. Domains", "{F676252A-5024-4CD2-AE8B-D34F7761D630}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Services", "3. Services", "{7E7608A4-FC89-40C7-B3EB-AA81B08B4251}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Tests", "4. Tests", "{72A3C11A-FBB2-41C5-933A-E622BA8B0957}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1 Services", "3.1 Services", "{1942CBD5-A0D5-4E88-93D2-427C4DD8DA3A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2 Repositories", "3.2 Repositories", "{246B5416-200B-47B8-9590-FCEE1D65C7E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnappetChallenge.Report.Service", "SnappetChallenge.Report.Service\SnappetChallenge.Report.Service.csproj", "{221767DC-0E0D-430B-8E87-6C40584D7B6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnappetChallenge.Report.Repository", "SnappetChallenge.Report.Repository\SnappetChallenge.Report.Repository.csproj", "{71CCBE96-75D0-401E-B51D-0CF3C305E964}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnappetChallenge.Report.Common", "SnappetChallenge.Report.Common\SnappetChallenge.Report.Common.csproj", "{1C8C2489-9925-4275-8158-B9A3C5D71245}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnappetChallenge.Report.API", "SnappetChallenge.Report.API\SnappetChallenge.Report.API.csproj", "{38C3B5BF-F1D8-42EA-8F91-0ACD6C0294F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnappetChallenge.Report.WebApp", "SnappetChallenge.Report.WebApp\SnappetChallenge.Report.WebApp.csproj", "{E81EC33B-0F21-4F4F-91A8-0F2FACD75FB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnappetChallenge.Report.UnitTest", "SnappetChallenge.Report.UnitTest\SnappetChallenge.Report.UnitTest.csproj", "{5FD9D644-943E-4A31-994D-11733570EF28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99227308-BFCF-4C67-BE48-32C53C0B0C6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99227308-BFCF-4C67-BE48-32C53C0B0C6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99227308-BFCF-4C67-BE48-32C53C0B0C6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99227308-BFCF-4C67-BE48-32C53C0B0C6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{221767DC-0E0D-430B-8E87-6C40584D7B6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{221767DC-0E0D-430B-8E87-6C40584D7B6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{221767DC-0E0D-430B-8E87-6C40584D7B6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{221767DC-0E0D-430B-8E87-6C40584D7B6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71CCBE96-75D0-401E-B51D-0CF3C305E964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71CCBE96-75D0-401E-B51D-0CF3C305E964}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71CCBE96-75D0-401E-B51D-0CF3C305E964}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71CCBE96-75D0-401E-B51D-0CF3C305E964}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C8C2489-9925-4275-8158-B9A3C5D71245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C8C2489-9925-4275-8158-B9A3C5D71245}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C8C2489-9925-4275-8158-B9A3C5D71245}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C8C2489-9925-4275-8158-B9A3C5D71245}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38C3B5BF-F1D8-42EA-8F91-0ACD6C0294F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38C3B5BF-F1D8-42EA-8F91-0ACD6C0294F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38C3B5BF-F1D8-42EA-8F91-0ACD6C0294F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38C3B5BF-F1D8-42EA-8F91-0ACD6C0294F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E81EC33B-0F21-4F4F-91A8-0F2FACD75FB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E81EC33B-0F21-4F4F-91A8-0F2FACD75FB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E81EC33B-0F21-4F4F-91A8-0F2FACD75FB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E81EC33B-0F21-4F4F-91A8-0F2FACD75FB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FD9D644-943E-4A31-994D-11733570EF28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FD9D644-943E-4A31-994D-11733570EF28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FD9D644-943E-4A31-994D-11733570EF28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FD9D644-943E-4A31-994D-11733570EF28}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{99227308-BFCF-4C67-BE48-32C53C0B0C6A} = {F676252A-5024-4CD2-AE8B-D34F7761D630}
+		{1942CBD5-A0D5-4E88-93D2-427C4DD8DA3A} = {7E7608A4-FC89-40C7-B3EB-AA81B08B4251}
+		{246B5416-200B-47B8-9590-FCEE1D65C7E6} = {7E7608A4-FC89-40C7-B3EB-AA81B08B4251}
+		{221767DC-0E0D-430B-8E87-6C40584D7B6D} = {1942CBD5-A0D5-4E88-93D2-427C4DD8DA3A}
+		{71CCBE96-75D0-401E-B51D-0CF3C305E964} = {246B5416-200B-47B8-9590-FCEE1D65C7E6}
+		{1C8C2489-9925-4275-8158-B9A3C5D71245} = {F676252A-5024-4CD2-AE8B-D34F7761D630}
+		{38C3B5BF-F1D8-42EA-8F91-0ACD6C0294F8} = {CFF56F26-2F04-4720-93EB-DC9C912C0F9D}
+		{E81EC33B-0F21-4F4F-91A8-0F2FACD75FB7} = {CFF56F26-2F04-4720-93EB-DC9C912C0F9D}
+		{5FD9D644-943E-4A31-994D-11733570EF28} = {72A3C11A-FBB2-41C5-933A-E622BA8B0957}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E512943-4AA7-4127-BD0B-C0244B446F7A}
+	EndGlobalSection
+EndGlobal

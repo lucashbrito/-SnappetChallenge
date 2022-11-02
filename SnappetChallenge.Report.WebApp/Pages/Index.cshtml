@@ -1,0 +1,57 @@
+﻿@page
+@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            UserId:
+            <input type="text" name="userId" value="@Model.UserId" />
+        </p>
+    </div>
+    <div>
+        <p>
+            Date:
+            <input type="datetime-local" name="date" value="@Model.Date" />
+            <input type="submit" value="Search" class="btn btn-primary" /> |
+            <a asp-page="./Index">Back to full List</a>
+        </p>
+    </div>
+</form>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>UserId </td>
+            <td>Progress</td>
+            <td>Subject</td>
+            <td>LearningObjective</td>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.DailyOverview != null)
+        {
+            foreach (var overview in Model.DailyOverview.Items)
+            {
+                <tr>
+                    <td> @overview.UserId </td>
+                    <td>@overview.Progress</td>
+                    <td>@overview.Subject</td>
+                    <td>@overview.LearningObjective</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+@{
+    var prevDisabled = !Model.DailyOverview.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.DailyOverview.HasNextPage ? "disabled" : "";
+}
+
+<a asp-page="./Index" asp-route-pageIndex="@(Model.DailyOverview.Page - 1)" class="btn btn-primary @prevDisabled">Previous</a>
+<a asp-page="./Index" asp-route-pageIndex="@(Model.DailyOverview.Page + 1)" class="btn btn-primary @nextDisabled">Next</a>

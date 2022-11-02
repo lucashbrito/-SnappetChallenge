@@ -1,0 +1,22 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/SnappetChallenge.Report.WebApp/obj/Debug/net6.0
+/SnappetChallenge.Report.WebApp/obj
+/SnappetChallenge.Report.Service/obj
+/SnappetChallenge.Report.Repository/obj
+/SnappetChallenge.Report.Domain/.vs
+/SnappetChallenge.Report.Domain/obj
+/SnappetChallenge.Report.Common/obj
+/.vs
+/SnappetChallenge.Report.API/obj
+/SnappetChallenge.Report.UnitTest/obj
+/SnappetChallenge.Report.API/bin/Debug/net6.0/runtimes
+/SnappetChallenge.Report.API/bin/Debug/net6.0
+/SnappetChallenge.Report.Common/bin/Debug/net6.0
+/SnappetChallenge.Report.Domain/bin/Debug/net6.0
+/SnappetChallenge.Report.Repository/bin/Debug/net6.0
+/SnappetChallenge.Report.Service/bin/Debug/net6.0
+/SnappetChallenge.Report.UnitTest/bin/Debug/net6.0
+/SnappetChallenge.Report.WebApp/bin/Debug/net6.0
